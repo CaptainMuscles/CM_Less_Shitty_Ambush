@@ -63,6 +63,7 @@
     <Compile Include="ExitMapGrid_Patches.cs" />
     <Compile Include="IncidentWorker_Ambush_EnemyFaction_Patches.cs" />
     <Compile Include="IncidentWorker_Ambush_ManhunterPack_Patches.cs" />
+    <Compile Include="IncidentWorker_CaravanDemand_Patches.cs" />
     <Compile Include="LessShittyAmbushMod.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
