@@ -10,11 +10,11 @@ namespace CM_Less_Shitty_Ambush
     {
         private float maxEnemyFactionMultiplier = 20.0f;
         private float maxManhunterPackMultiplier = 20.0f;
-        private int maxMinutesUntilExitMapPossible = 1000;
+        private int maxSecondsUntilExitMapPossible = 1000;
 
         public float enemyFactionMultiplier = 2.0f;
         public float manhunterPackMultiplier = 2.0f;
-        public int minutesUntilExitMapPossible = 42;
+        public int secondsUntilExitMapPossible = 120;
 
         public bool allowExitMapBeforeWin = false;
 
@@ -26,7 +26,7 @@ namespace CM_Less_Shitty_Ambush
 
             Scribe_Values.Look(ref enemyFactionMultiplier, "enemyFactionMultiplier", 2.0f);
             Scribe_Values.Look(ref manhunterPackMultiplier, "manhunterPackMultiplier", 2.0f);
-            Scribe_Values.Look(ref minutesUntilExitMapPossible, "minutesUntilExitMapPossible", 42);
+            Scribe_Values.Look(ref secondsUntilExitMapPossible, "secondsUntilExitMapPossible", 120);
             Scribe_Values.Look(ref allowExitMapBeforeWin, "allowExitMapBeforeWin", false);
             Scribe_Values.Look(ref showDebugLogMessages, "showDebugLogMessages", false);
         }
@@ -50,8 +50,8 @@ namespace CM_Less_Shitty_Ambush
             if (allowExitMapBeforeWin)
             {
                 listing_Standard.Label("CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel".Translate());
-                listing_Standard.Label(minutesUntilExitMapPossible.ToString());
-                minutesUntilExitMapPossible = (int)listing_Standard.Slider(minutesUntilExitMapPossible, 0, maxMinutesUntilExitMapPossible);
+                listing_Standard.Label(secondsUntilExitMapPossible.ToString());
+                secondsUntilExitMapPossible = (int)listing_Standard.Slider(secondsUntilExitMapPossible, 0, maxSecondsUntilExitMapPossible);
             }
 
             listing_Standard.CheckboxLabeled("CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel".Translate(), ref showDebugLogMessages);

@@ -24,7 +24,7 @@ namespace CM_Less_Shitty_Ambush
 
                         int currentTick = Find.TickManager.TicksGame;
 
-                        if (ambushTracker != null && currentTick > ambushTracker.CheckMapCreateTime(___map) + (LessShittyAmbushMod.settings.minutesUntilExitMapPossible * 60))
+                        if (ambushTracker != null && currentTick > ambushTracker.CheckMapCreateTime(___map) + (LessShittyAmbushMod.settings.secondsUntilExitMapPossible * 60))
                             __result = true;
                     }
                 }
